@@ -1,58 +1,114 @@
 <!doctype html>
 <html lang="pt-br">
-    <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css" />
     <title>Portifólio</title>
-    </head>
-    <body>
+</head>
+
+<body>
     <header>
         <div class="header">
             <h1>Pedro Henrique Alves Ribeiro</h1>
-                <div class="opcoes">
+
+            <nav class="opcoes">
                 <ul>
                     <li><a href="#sobremim">Sobre mim</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
-        <div class="apresentacao">
-            <img src="/img/foto.jpg" alt="Foto de Pedro Henrique Alves Ribeiro" />
-            <h1>Desenvolvedor Junior</h1>
+
+    <section class="hero">
+        <img src="/img/fundo.jpg" class="bg" />
+
+        <div class="hero-content">
+            <img src="/img/foto.jpg" />
+
+            <h1>Pedro Henrique Alves Ribeiro</h1>
+            <p id="digitando"></p>
         </div>
-        <div class="sobremim">
+    </section>
+
+    <section class="sobremim hidden" id="sobremim">
+        <div class="texto">
             <h2>Sobre mim</h2>
-            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque ad iste dolores molestiae deserunt ea, tempore maiores rerum laborum, aliquam quo facere quidem placeat minima hic ut, accusantium ipsum. Cupiditate.</h3>
+            <p>
+                Olá, meu nome é Pedro e estou em formação na área de desenvolvimento
+                web, com foco em JavaScript.
+            </p>
+            <p>
+                Busco constantemente aprimorar minhas habilidades para ingressar no
+                mercado.
+            </p>
         </div>
-        <div class="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+
+        <div class="imagem">
+            <img src="/img/coding.png" class="coding" />
         </div>
-        <div class="projetos">
-            <h2>Projetos</h2>
-            <link rel="stylesheet" href="https://pedro-projeto-calculadora-medias-ten.vercel.app/"/>
-            <link rel="stylesheet" href="https://pedro-lista-contatos.vercel.app/">
-            <link rel="stylesheet" href="https://projeto1-fawn-mu.vercel.app/">
+    </section>
+
+    <section class="habilidades hidden" id="habilidades">
+        <h2>Habilidades</h2>
+
+        <div class="skills">
+            <span data-desc="Estrutura de páginas web">
+                <img src="/img/html.png" />
+                <p>HTML</p>
+            </span>
+
+            <span data-desc="Estilização e layout">
+                <img src="/img/css.png" />
+                <p>CSS</p>
+            </span>
+
+            <span data-desc="Interatividade">
+                <img src="/img/js.png" />
+                <p>JavaScript</p>
+            </span>
         </div>
-        <div class="contato">
-            <h2>Contato</h2>
-            <p>Email: pedrohenriquealvesribeiro2005@gmail.com</p>
-            <p>Telefone: (49) 9 9117-5803</p>
-            <div class="redessociais">
-                <a href="https://www.instagram.com/phar.com.br/" target="_blank">Instagram</a>
-                <a href="https://github.com/Druago" target="_blank">GitHub</a>
-            </div>
+    </section>
+
+    <section class="projetos hidden" id="projetos">
+        <h2>Projetos</h2>
+
+        <div class="cards">
+            <a href="https://pedro-projeto-calculadora-medias-ten.vercel.app/" target="_blank" class="card">
+                Calculadora de média
+            </a>
+
+            <a href="https://pedro-lista-contatos.vercel.app/" target="_blank" class="card">
+                Lista de Contatos
+            </a>
+
+            <a href="https://projeto1-fawn-mu.vercel.app/" target="_blank" class="card">
+                Landing Page
+            </a>
         </div>
-        <footer>
-            <p>&copy; 2026 Pedro Henrique Alves Ribeiro. Todos os direitos reservados.</p>
-        </footer>
-    </body>
+    </section>
+
+    <section class="contato hidden" id="contato">
+        <h2>Contato</h2>
+
+        <p>Telefone: (49) 9 9117-5803</p>
+        <p>Email: pedrohenriquealvesribeiro2005@gmail.com</p>
+
+        <div class="redessociais">
+            <a href="#"><img src="/img/instagram.png" /></a>
+            <a href="#"><img src="/img/github.png" /></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pedro Henrique Alves Ribeiro</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
 </html>
