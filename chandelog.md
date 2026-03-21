@@ -32,3 +32,4 @@
 - Ajustes de alinhamento no layout
 - Correção de bugs de responsividade
 - Correção de conflitos de CSS
+- Correção dos links de redirecionamento das redes sociais (GitHub e Instagram), garantindo acesso correto aos perfis
