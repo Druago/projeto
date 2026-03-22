@@ -62,3 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const skills = document.querySelectorAll(".skills span");
+
+skills.forEach(skill => {
+    skill.addEventListener("click", () => {
+
+        // remove de todos
+        skills.forEach(s => s.classList.remove("active"));
+
+        // ativa só o clicado
+        skill.classList.add("active");
+    });
+});

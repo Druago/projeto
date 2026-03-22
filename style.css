@@ -364,6 +364,16 @@ footer {
         max-width: 300px;
     }
 
+    .skills span::after {
+        opacity: 1;
+        position: static;
+        transform: none;
+        margin-top: 8px;
+
+        max-width: 120px;
+        font-size: 11px;
+    }
+    
     .skills img {
         width: 70px;
         height: 70px;
@@ -380,5 +390,9 @@ footer {
 
     .card {
         width: 80%;
+    }
+
+        .contato p {
+        font-size: 15px;
     }
 }

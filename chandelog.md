@@ -33,3 +33,4 @@
 - Correção de bugs de responsividade
 - Correção de conflitos de CSS
 - Correção dos links de redirecionamento das redes sociais (GitHub e Instagram), garantindo acesso correto aos perfis
+- Correção da responsividade das skills e do email de contato
