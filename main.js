@@ -17,18 +17,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (elemento) {
         let i = 0;
+const texto = "Desenvolvedor Web";
+const texto2 = "Transformo ideias em sites modernos, rápidos e responsivos.";
 
-        function digitar() {
-            if (i < texto.length) {
-                elemento.innerHTML += texto.charAt(i);
-                i++;
-                setTimeout(digitar, 80);
-            }
+const elemento = document.getElementById("digitando");
+const elemento2 = document.getElementById("digitando2");
+
+if (elemento && elemento2) {
+
+    let i = 0;
+    let j = 0;
+
+    function digitarTitulo() {
+        if (i < texto.length) {
+            elemento.innerHTML += texto.charAt(i);
+            i++;
+            setTimeout(digitarTitulo, 80);
+        } else {
+            setTimeout(digitarDescricao, 300); // pequena pausa
         }
-
-        digitar();
     }
 
+    function digitarDescricao() {
+
+    elemento2.style.opacity = "1";
+
+    if (j < texto2.length) {
+        elemento2.innerHTML += texto2.charAt(j);
+        j++;
+        setTimeout(digitarDescricao, 40);
+        }
+    }
+
+    digitarTitulo();
+    }
+}
     const sections = document.querySelectorAll("section");
     const links = document.querySelectorAll(".opcoes a");
 
@@ -61,17 +84,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-});
-
-const skills = document.querySelectorAll(".skills span");
-
-skills.forEach(skill => {
-    skill.addEventListener("click", () => {
-
-        // remove de todos
-        skills.forEach(s => s.classList.remove("active"));
-
-        // ativa só o clicado
-        skill.classList.add("active");
-    });
 });
