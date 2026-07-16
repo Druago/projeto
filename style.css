@@ -7,6 +7,15 @@ html {
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE e Edge antigo */
+    scrollbar-width: none;     /* Firefox */
+}
+
 img {
     max-width: 100%;
     height: auto;
