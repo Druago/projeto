@@ -4,104 +4,162 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Portifólio</title>
+    <meta name="description" content="Portfólio de Pedro Henrique Alves Ribeiro, desenvolvedor web." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2" />
+    <title>Pedro Henrique Alves Ribeiro · Desenvolvedor Web</title>
 </head>
 
 <body>
     <header>
         <div class="header">
-            <h1>Pedro Henrique Alves Ribeiro</h1>
+            <div class="brand">
+                <span class="brand-dot"></span>
+                <h1>phar<span class="brand-accent">.dev</span></h1>
+            </div>
 
             <nav class="opcoes">
                 <ul>
-                    <li><a href="#sobremim">Sobre mim</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobremim"><span class="tag">01</span>sobre</a></li>
+                    <li><a href="#habilidades"><span class="tag">02</span>skills</a></li>
+                    <li><a href="#projetos"><span class="tag">03</span>projetos</a></li>
+                    <li><a href="#contato"><span class="tag">04</span>contato</a></li>
                 </ul>
             </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
     <section class="hero">
-        <img src="/img/fundo.jpg" class="bg" />
+        <img src="img/fundo.jpg" class="bg" alt="" />
 
         <div class="hero-content">
-            <img src="/img/foto.jpg" />
-
-            <h1>Pedro Henrique Alves Ribeiro</h1>
-            <p id="digitando"></p>
-            <p id="digitando2"></p>
-
+            <div class="editor-window">
+                <div class="editor-titlebar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <span class="editor-filename">apresentacao.js</span>
+                </div>
+                <div class="editor-body">
+                    <img src="img/foto.jpg" class="avatar" alt="Foto de Pedro Henrique Alves Ribeiro" />
+                    <div class="editor-text">
+                        <p class="editor-line"><span class="mono-muted">const</span> <span class="mono-var">dev</span> <span class="mono-muted">=</span> <span class="mono-string">"Pedro Henrique Alves Ribeiro"</span>;</p>
+                        <div class="typing-wrap">
+                            <div class="typing-ghost" aria-hidden="true">
+                                <h1 class="typing-title">Desenvolvedor Web</h1>
+                                <p class="typing-sub">Transformo ideias em sites modernos, rápidos e responsivos.</p>
+                            </div>
+                            <div class="typing-real">
+                                <h1 id="digitando" class="typing-title"></h1>
+                                <p id="digitando2" class="typing-sub"></p>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+                            <a href="#contato" class="btn btn-ghost">Falar comigo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="sobremim hidden" id="sobremim">
         <div class="texto">
+            <span class="eyebrow">// sobre-mim</span>
             <h2>Sobre mim</h2>
             <p>
                 Sou desenvolvedor web focado na criação de aplicações modernas e intuitivas. Tenho experiência com HTML, CSS, JavaScript e banco de dados SQL Server. Atualmente atuo com suporte a sistemas ERP e desenvolvimento de soluções para automatizar processos e melhorar a experiência dos usuários.
             </p>
             <p>
-                Busco constantemente aprimorar minhas habilidades para ingressar no
-                mercado.
+                Busco constantemente aprimorar minhas habilidades para ingressar no mercado.
             </p>
         </div>
 
         <div class="imagem">
-            <img src="/img/coding.png" class="coding" />
+            <img src="img/coding.png" class="coding" alt="Ilustração de um notebook com janelas de código" />
         </div>
     </section>
 
     <section class="habilidades hidden" id="habilidades">
-        <h2>Habilidades</h2>
+        <span class="eyebrow center">// habilidades</span>
+        <h2>Stack principal</h2>
 
         <div class="skills">
             <span data-desc="Estrutura de páginas web">
-                <img src="/img/html.png" />
+                <img src="img/html.png" alt="HTML5" />
                 <p>HTML</p>
             </span>
 
             <span data-desc="Estilização e layout">
-                <img src="/img/css.png" />
+                <img src="img/css.png" alt="CSS3" />
                 <p>CSS</p>
             </span>
 
             <span data-desc="Interatividade">
-                <img src="/img/js.png" />
+                <img src="img/js.png" alt="JavaScript" />
                 <p>JavaScript</p>
             </span>
         </div>
     </section>
 
     <section class="projetos hidden" id="projetos">
+        <span class="eyebrow center light">// projetos</span>
         <h2>Projetos</h2>
+        <p class="section-sub">Alguns trabalhos que desenvolvi para praticar e evoluir como desenvolvedor.</p>
 
         <div class="cards">
-            <a href="https://pedro-projeto-calculadora-medias-ten.vercel.app/" target="_blank" class="card">
-                Calculadora de média
+            <a href="https://imobiliaria-six-peach.vercel.app/" target="_blank" rel="noopener" class="card">
+                <div class="card-thumb">
+                    <img src="img/imobiliaria.png" alt="Prévia do site Imobiliária" loading="lazy" />
+                </div>
+                <div class="card-body">
+                    <h3>Imobiliária</h3>
+                    <p>Landing page para imobiliária com busca de imóveis e área do proprietário.</p>
+                    <span class="card-link">Ver projeto →</span>
+                </div>
             </a>
 
-            <a href="https://pedro-lista-contatos.vercel.app/" target="_blank" class="card">
-                Lista de Contatos
+            <a href="https://pedro-projeto-calculadora-medias-ten.vercel.app/" target="_blank" rel="noopener" class="card">
+                <div class="card-thumb">
+                    <img src="img/calculadoramedias.png" alt="Prévia da Calculadora de médias" loading="lazy" />
+                </div>
+                <div class="card-body">
+                    <h3>Calculadora de médias</h3>
+                    <p>Aplicação que calcula a média final e aprovação a partir das notas cadastradas.</p>
+                    <span class="card-link">Ver projeto →</span>
+                </div>
             </a>
 
-            <a href="https://projeto1-fawn-mu.vercel.app/" target="_blank" class="card">
-                Landing Page
+            <a href="https://projeto1-fawn-mu.vercel.app/" target="_blank" rel="noopener" class="card">
+                <div class="card-thumb">
+                    <img src="img/landingpage.png" alt="Prévia da Landing Page Games Shop" loading="lazy" />
+                </div>
+                <div class="card-body">
+                    <h3>Landing Page</h3>
+                    <p>Página institucional para loja de games, com seção de contato e redes sociais.</p>
+                    <span class="card-link">Ver projeto →</span>
+                </div>
             </a>
         </div>
     </section>
 
     <section class="contato hidden" id="contato">
-        <h2>Contato</h2>
+        <span class="eyebrow center">// contato</span>
+        <h2>Vamos conversar?</h2>
 
-        <p>Telefone: (49) 9 9117-5803</p>
-        <p>Email: pedrohenriquealvesribeiro2005@gmail.com</p>
+        <div class="contato-info">
+            <p>📞 (49) 9 9117-5803</p>
+            <p>✉️ pedrohenriquealvesribeiro2005@gmail.com</p>
+        </div>
 
         <div class="redessociais">
-            <a href="https://www.instagram.com/phar.com.br/"><img src="/img/instagram.png" /></a>
-            <a href="https://github.com/Druago"><img src="/img/github.png" /></a>
+            <a href="https://www.instagram.com/phar.com.br/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.png" alt="" /></a>
+            <a href="https://github.com/Druago" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/github.png" alt="" /></a>
         </div>
     </section>
 
